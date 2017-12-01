@@ -1,0 +1,28 @@
+{
+  "name": "datong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run build; npm run start",
+    "start": "node server.js",
+    "build": "npm run html_build; npm run js_build; npm run img_build",
+    "html_build": "gulp html_build",
+    "js_build": "gulp js_build",
+    "img_build": "gulp img_build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xfcdxg/datong.git"
+  },
+  "author": "zhou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xfcdxg/datong/issues"
+  },
+  "homepage": "https://github.com/xfcdxg/datong#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

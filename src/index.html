@@ -1,0 +1,59 @@
+<!DOCTYPE html/>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <title>大通</title>
+    <link rel='stylesheet' href='/lib/css/normalize.css' />
+    <link rel='stylesheet' href='/lib/css/common.css' />
+    <link rel='stylesheet' href='style.css' />
+    <script>!function(e,i){var t=window,n=t.document,a=navigator.userAgent,o=a.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),r=a.match(/U3\/((\d+|\.){5,})/i),s=r&&parseInt(r[1].split(".").join(""),10)>=80,c=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),m=t.devicePixelRatio||1;window.location.href;c||o&&o[1]>534||s||(m=1);var p=1/m,d=n.querySelector('meta[name="viewport"]');d||((d=n.createElement("meta")).setAttribute("name","viewport"),n.head.appendChild(d)),d.setAttribute("content","width=device-width,user-scalable=no,initial-scale="+p+",maximum-scale="+p+",minimum-scale="+p),n.documentElement.style.fontSize=50*m*1+"px",window.viewportScale=m}()</script>
+  </head>
+<body>
+
+<div id='root'>
+  <div id='form'>
+    <ul>
+      <li>
+        <label><strong>手机号</strong></label>
+        <input type='tel' maxlength='11' placeholder='请输入手机号' id='pn' />
+      </li>
+      <li><span class='gray'>注：仅限大通车主和员工</span></li>
+      <li>
+        <label class='btn inline-block wp100' id='jiaru'>立即加入</label>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id='popup' class='hide'>
+  <div id='mask'></div>
+  <div id='layer'>
+    <div><img src='/lib/img/dt_logo.png' style='width:2rem' /></div>
+    <div class="tcenter font34"><strong>您还没有进行车主认证</strong></div>
+    <div class='btn' id='renzheng'>去进行车主认证</div>
+  </div>
+</div>
+<script src='/lib/index.js'></script>
+<script>
+  ;(function() {
+    var $jiaru = $('#jiaru')
+    var $popup = $('#popup')
+    var $renzheng = $('#renzheng')
+
+    var handleJiaruClick = function() {
+      $popup.className = ''
+    }
+
+    var handleRenzhengClick = function() {
+      location.href = '/main'
+    }
+
+    bind($jiaru, 'click', handleJiaruClick)
+    bind($renzheng, 'click', handleRenzhengClick)
+  })()
+</script>
+</body></html>

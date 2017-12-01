@@ -1,0 +1,30 @@
+.gray {
+  color: #828a92
+}
+
+.btn {
+  background-image: url('../img/btn_bg_r.png');
+  line-height: .94rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-size: .34rem;
+  background-size: 101% 100%;
+  padding-bottom: 0.15rem;
+  background-position: 0.05rem;
+}
+.tcenter {
+  text-align: center;
+}
+.font34 {
+  font-size: .34rem;
+}
+.inline-block {
+  display: inline-block;
+}
+.wp100 {
+  width: 100%
+}
+.wp50 {
+  width: 50%
+}
