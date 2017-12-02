@@ -1,0 +1,7 @@
+.car-card {
+  border: 2px solid #efefef;
+  margin-bottom: .3rem
+}
+.car-card .btn {
+  width:3.4rem;margin: .64rem auto
+}

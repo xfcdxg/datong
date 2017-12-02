@@ -1,0 +1,35 @@
+.info-container {
+  padding: 0 .3rem
+}
+.info {
+  padding: .2rem 0;
+
+  border-bottom: .01rem solid rgba(211,215,219,0.30);
+}
+
+.info .key {
+  float: left;
+  color: #3d464d;
+  width: 35%;
+  font-size: .3rem
+}
+
+.info .val {
+  padding-left: 35%;
+  color: #828a92;
+  font-size: .3rem
+}
+.info .val label span img {
+  width: .4rem;
+  position: relative;
+  top: .1rem;
+  margin-right: .2rem;
+}
+.info .val label {
+  margin-right: .8rem;
+  padding-left: .15rem
+}
+.info .val input, .info .val select {
+  font-size: .3rem;
+  width: 100%;
+}

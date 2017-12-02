@@ -55,7 +55,9 @@ input, textarea {
     outline: none !important;
     border: none;
 }
-
+a {
+  text-decoration: none;
+}
 body,
 html {
   width: 100%;

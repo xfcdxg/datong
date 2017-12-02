@@ -1,0 +1,47 @@
+.info-container {
+  padding: 0 .3rem
+}
+.info {
+  padding: .2rem 0;
+
+  border-bottom: .01rem solid rgba(211,215,219,0.30);
+}
+
+
+.info .key {
+  float: left;
+  color: #3d464d;
+  font-size: .3rem
+}
+
+.info .val {
+  text-align: right;
+  color: #828a92;
+  font-size: .3rem
+}
+
+.timeline-container {
+  margin: 1.15rem .3rem;
+}
+
+.timeline {
+  margin-bottom: 1.2rem;
+  line-height: .5rem;
+  vertical-align: middle;
+}
+
+.timeline .date, .timeline .status {
+  color: #d3d7db
+}
+.timeline .circle {
+  margin: 0 .64rem 0 .4rem
+}
+.timeline .circle img {
+  width: .5rem;
+  position: relative;
+  top: .12rem;
+}
+
+.timeline.active .date, .timeline.active .status {
+  color: #3d464d;
+}

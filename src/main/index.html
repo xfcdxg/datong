@@ -15,74 +15,82 @@
   <body style="overflow: hidden">
 
 <div id='root'>
-  <div><img src='/lib/img/2_banner.png' style='height:406px;' class='wp100' /></div>
+  <div><img src='../lib/img/2_banner.png' style='height:4.06rem;' class='wp100' /></div>
   <div class='radius10 pos-rel ml30 mr30 bg-w' style='top: -50px;width: calc(100% - .6rem);box-shadow: 0px 10px 34px 1px rgba(80,140,238,0.13);height:2.6rem;padding: .47rem .8rem; '>
     <div class='inline-block' style='width:48%'>
-      <div class='tcenter mb30'><img src='/lib/img/2_user.png' style='width:1rem' /></div>
-      <div class='tcenter'>我的客户</div>
+      <a href='../customer'>
+        <div class='tcenter mb30'><img src='../lib/img/2_user.png' style='width:1rem' /></div>
+        <div class='tcenter black'>我的客户</div>
+      </a>
     </div>
     <div class='inline-block' style='width:48%'>
-      <div class='tcenter mb30'><img src='/lib/img/2_user.png' style='width:1rem' /></div>
-      <div class='tcenter'>新手指引</div>
+      <a href='../guide'>
+        <div class='tcenter mb30'><img src='../lib/img/2_user.png' style='width:1rem' /></div>
+        <div class='tcenter black'>新手指引</div>
+      </a>
     </div>
   </div>
 
   <div style='padding:.3rem;line-height:.4rem; vertical-align:middle'>
-    <span class='inline-block' style='margin-right: .7rem'><img src='/lib/img/tongzhi.png' style='width: 1.44rem' /></span>
+    <span class='inline-block' style='margin-right: .7rem'><img src='../lib/img/tongzhi.png' style='width: 1.44rem' /></span>
     <span class='inline-block' style='color:#828a92;position: relative;top: -.05rem;'>汽车上路前需办理手续</span>
   </div>
-  <div style='height: .2rem;background-color:#f7f9fb;'></div>
+  <div class='step'></div>
   <div><strong class="font36 pd30">任务</strong></div>
-  <div class="bg-b m30" style='height:1.6rem; width: calc(100%-.6rem);'>缺图</div>
+  <div class="m30" style='height:1.6rem; width: calc(100%-.6rem);'><img src='../lib/img/2_ad.png' class='wp100' /></div>
   <div class="pd30">
     <strong class='font36'>热销车型</strong>
     <span class="inline-block gray fright">查看更多 ><span>
   </div>
-  <div class="pd30 x-scroll" style='margin-bottom: 2rem'>
+  <div class="pd30 x-scroll touch" style='padding-bottom: 2rem'>
     <ul style='width: 19rem'>
       <li class='inline-block'>
         <div class='car-card'>
-          <div style='margin-bottom: .57rem'><img src='/lib/img/2_car.png' style='width: 3.25rem' /></div>
+          <div style='margin-bottom: .57rem'><img src='../lib/img/2_car.png' style='width: 3.25rem' /></div>
           <div class='font30 black' style='margin-bottom: .21rem'><strong>G10 PLUS 柴油豪华版</strong></div>
           <div class='font30 red'><strong>229.800起</strong></div>
         </div>
       </li>
       <li class='inline-block'>
         <div class='car-card'>
-          <div style='margin-bottom: .57rem'><img src='/lib/img/2_car.png' style='width: 3.25rem' /></div>
+          <div style='margin-bottom: .57rem'><img src='../lib/img/2_car.png' style='width: 3.25rem' /></div>
           <div class='font30 black' style='margin-bottom: .21rem'><strong>G10 PLUS 柴油豪华版</strong></div>
           <div class='font30 red'><strong>229.800起</strong></div>
         </div>
       </li>
       <li class='inline-block'>
         <div class='car-card'>
-          <div style='margin-bottom: .57rem'><img src='/lib/img/2_car.png' style='width: 3.25rem' /></div>
+          <div style='margin-bottom: .57rem'><img src='../lib/img/2_car.png' style='width: 3.25rem' /></div>
           <div class='font30 black' style='margin-bottom: .21rem'><strong>G10 PLUS 柴油豪华版</strong></div>
           <div class='font30 red'><strong>229.800起</strong></div>
         </div>
       </li>
       <li class='inline-block'>
         <div class='car-card'>
-          <div style='margin-bottom: .57rem'><img src='/lib/img/2_car.png' style='width: 3.25rem' /></div>
+          <div style='margin-bottom: .57rem'><img src='../lib/img/2_car.png' style='width: 3.25rem' /></div>
           <div class='font30 black' style='margin-bottom: .21rem'><strong>G10 PLUS 柴油豪华版</strong></div>
           <div class='font30 red'><strong>229.800起</strong></div>
         </div>
       </li>
     </ul>
   </div>
-  <div class='wp100 bg-w pos-fix' style='padding: .2rem 0 .1rem 0;box-shadow: 0px -3px 8px 1px rgba(80,140,238,0.1);bottom: 0;'>
+  <div class='wp100 bg-w pos-fix' id='menu'>
     <ul>
-      <li class="inline-block tcenter wp32 blue" style="width: 32%; color: #4f8cee;  vertical-align: top">
-        <div><img src='/lib/img/2_shouye.png' style='width: .7rem' /></div>
+      <li class="inline-block tcenter wp32 blue vtop">
+        <div><img src='../lib/img/shouye_a.png' class="icon" /></div>
         <div>首页</div>
       </li>
       <li class="inline-block tcenter wp33 black vtop">
-        <div><img src='/lib/img/2_dian.png' style='width: .5rem; margin-bottom: .2rem;' /></div>
-        <div>推广</div>
+        <a href='../shop'>
+          <div><img src='../lib/img/dian.png' class="icon"  /></div>
+          <div class='black'>推广</div>
+        </a>
       </li>
       <li class="inline-block tcenter wp32 black vtop">
-        <div><img src='/lib/img/2_wo.png' style='width: .5rem; margin-bottom: .2rem;' /></div>
-        <div>我的</div>
+        <a href='../mine'>
+          <div><img src='../lib/img/wo.png' class="icon" /></div>
+          <div class='black'>我的</div>
+        </a>
       </li>
     </ul>
   </div>
@@ -90,7 +98,7 @@
 <div id='popup' class=''>
   <div id='mask'></div>
   <div id='layer'>
-    <div><img src='/lib/img/cz.png' style='width:2rem' /></div>
+    <div><img src='../lib/img/cz.png' style='width:2rem' /></div>
     <div class="tcenter" style='font-size:.40rem; margin-bottom: .2rem'><strong>G10车主</strong></div>
     <div class="tcenter font34 mb30">恭喜你成为大通合伙人</div>
     <div class='btn' id='zhidao'>朕知道了</div>
