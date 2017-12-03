@@ -4,11 +4,11 @@
     window[name] = fn
   }
 
-  reg('$', function(selector, container) {
+  reg('el', function(selector, container) {
     if (!container) container = document
     return container.querySelector(selector)
   })
-  reg('$all', function(selector, container) {
+  reg('els', function(selector, container) {
     if (!container) container = document
     return container.querySelectorAll(selector)
   })

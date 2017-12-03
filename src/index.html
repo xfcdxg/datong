@@ -9,7 +9,7 @@
     <title>大通</title>
     <link rel='stylesheet' href='./lib/css/normalize.css' />
     <link rel='stylesheet' href='./lib/css/common.css' />
-    <link rel='stylesheet' href='style.css' />
+    <link rel='stylesheet' href='./style.css' />
     <script src='./lib/viewport.js'></script>
   </head>
 <body>
@@ -40,20 +40,20 @@
 <script src='./lib/index.js'></script>
 <script>
   ;(function() {
-    var $jiaru = $('#jiaru')
-    var $popup = $('#popup')
-    var $renzheng = $('#renzheng')
+    var jiaruEl = el('#jiaru')
+    var popupEl = el('#popup')
+    var renzhengEl = el('#renzheng')
 
     var handleJiaruClick = function() {
-      $popup.className = ''
+      popupEl.className = ''
     }
 
     var handleRenzhengClick = function() {
       location.href = '/main'
     }
 
-    bind($jiaru, 'click', handleJiaruClick)
-    bind($renzheng, 'click', handleRenzhengClick)
+    bind(jiaruEl, 'click', handleJiaruClick)
+    bind(renzhengEl, 'click', handleRenzhengClick)
   })()
 </script>
 </body></html>

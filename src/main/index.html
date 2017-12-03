@@ -108,15 +108,15 @@
 <script src='../lib/index.js'></script>
 <script>
   ;(function() {
-    var $zhidao = $('#zhidao')
-    var $popup = $('#popup')
+    var zhidaoEl = el('#zhidao')
+    var popupEl = el('#popup')
 
     var handleZhidaoClick = function() {
-      $popup.className = 'hide'
+      popupEl.className = 'hide'
       document.body.style.overflow = ''
     }
 
-    bind($zhidao, 'click', handleZhidaoClick)
+    bind(zhidaoEl, 'click', handleZhidaoClick)
   })()
 </script>
 </body></html>
