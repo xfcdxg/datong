@@ -23,37 +23,123 @@
     <ul><li class='active'><span>全部</span></li><li><span>已下订</span></li><li><span>合同签订</span></li><li><span>已提车</span></li><li><span>已取消</span></li></ul>
   </div>
 
-  <div id='order-container'>
-    <a class='order' href='../customer-info'>
-      <div>
-        <div class="fright mr30"><span class="status">已提车</span></div>
-        <div><span class='name'>巧克力</span></div>
-      </div>
-      <div class='detail'>
-        <div class='datetime'>2017-11-21 14:34</div>
-        <div class='no'>订单号：333444555666777888999</div>
-      </div>
-    </a>
-    <a class='order'>
-      <div>
-        <div class="fright mr30"><span class="status">已提车</span></div>
-        <div><span class='name'>巧克力ABC</span></div>
-      </div>
-      <div class='detail'>
-        <div class='datetime'>2017-11-21 14:34</div>
-        <div class='no'>订单号：333444555666777888999</div>
-      </div>
-    </a>
-    <a class='order'>
-      <div>
-        <div class="fright mr30"><span class="status">已提车</span></div>
-        <div><span class='name'>巧克力ABCDEFG</span></div>
-      </div>
-      <div class='detail'>
-        <div class='datetime'>2017-11-21 14:34</div>
-        <div class='no'>订单号：333444555666777888999</div>
-      </div>
-    </a>
+  <div id='order-container' style='width: 500%; transition: all .3s ease;'>
+    <div class="order-list inline-block vtop" style='width: calc(100% / 5)'>
+      <a class='order' href='../customer-info'>
+        <div>
+          <div class="fright mr30"><span class="status">已提车</span></div>
+          <div><span class='name'>巧克力</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">已下订</span></div>
+          <div><span class='name'>巧克力ABC</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">合同签订</span></div>
+          <div><span class='name'>巧克力ABCD</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">已提车</span></div>
+          <div><span class='name'>巧克力ABCDE</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">已取消</span></div>
+          <div><span class='name'>巧克力ABCDEF</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+    </div><div class="order-list inline-block vtop" style='width: calc(100% / 5)'>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">已下订</span></div>
+          <div><span class='name'>巧克力ABC</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+    </div><div class="order-list inline-block vtop" style='width: calc(100% / 5)'>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">合同签订</span></div>
+          <div><span class='name'>巧克力ABCD</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+    </div><div class="order-list inline-block vtop" style='width: calc(100% / 5)'>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">已提车</span></div>
+          <div><span class='name'>巧克力ABCDE</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+    </div><div class="order-list inline-block vtop" style='width: calc(100% / 5)'>
+      <a class='order'>
+        <div>
+          <div class="fright mr30"><span class="status">已取消</span></div>
+          <div><span class='name'>巧克力ABCDEF</span></div>
+        </div>
+        <div class='detail'>
+          <div class='datetime'>2017-11-21 14:34</div>
+          <div class='no'>订单号：333444555666777888999</div>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
+<script src='../lib/index.js'></script>
+<script>
+  ;(function() {
+    var orderContainerEl = el('#order-container')
+    var navEl = el('#nav')
+    var liArr = els('li', navEl)
+    var clientWidth = document.body.clientWidth
+
+    var handleNavClick = function(o, i) {
+      liArr.forEach(function(o) {
+        o.className = ''
+      })
+      o.className = 'active'
+      orderContainerEl.style.webkitTransform = 'translateX(-' + i * clientWidth + 'px)'
+    }
+    liArr.forEach(function(o, i) {
+      o.addEventListener('click', function() { handleNavClick(o, i) }, false)
+    })
+  })()
+</script>
 </body></html>
