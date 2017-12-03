@@ -127,9 +127,16 @@
   ;(function() {
     var orderContainerEl = el('#order-container')
     var navEl = el('#nav')
-    var liArr = els('li', navEl)
+    var liEls = els('li', navEl)
+    console.log('liEls is Array?', Array.isArray(liEls))
     var clientWidth = document.body.clientWidth
 
+    var liArr = []
+
+    for (var i = 0; i < liEls.length; i++) {
+      liArr.push(liEls[i])
+    }
+    console.log('liArr is Array?', Array.isArray(liArr))
     var handleNavClick = function(o, i) {
       liArr.forEach(function(o) {
         o.className = ''
