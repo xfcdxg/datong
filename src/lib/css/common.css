@@ -7,6 +7,9 @@
 .red {
   color: #f44a43;
 }
+.white {
+  color: #fff;
+}
 .bg-w {
   background-color: #fff
 }
@@ -32,6 +35,11 @@
   background-size: 101% 100%;
   padding-bottom: 0.15rem;
   background-position: 0.05rem;
+}
+.btn.blue {
+  background-image: url('../img/btn_bg_b.png');
+  background-position: 0;
+  background-size: 100% 100%;
 }
 .tcenter {
   text-align: center;
@@ -160,4 +168,25 @@
 
 .step {
   padding: .1rem .3rem; color: #828a92; background-color:#f7f9fb;
+}
+.msg {
+  position: absolute;
+  right: .3rem;
+  top: .3rem;
+  width: .32rem;
+  height: .35rem;
+  background-image: url('../img/msg_w.png');
+  background-size: cover;
+}
+.msg.bg_black {
+  background-image: url('../img/msg_b.png');
+}
+.msg .badge {
+  border-radius: 100%;
+  width: .16rem;
+  height: .16rem;
+  background-color: #f44a43;
+  position: absolute;
+  right: -.04rem;
+  top: -.04rem;
 }

@@ -15,29 +15,35 @@
   <body>
 
 <div id='root'>
-  <div><img src='../lib/img/3_banner.png' style='height:4.06rem;' class='wp100' /></div>
+  <div>
+    <div class='tcenter white pos-abs mt30 wp100' style=''>
+      <div class="fleft ml30"><img src='../lib/img/back.png' style='height: .36rem;position: relative;top: .09rem;' /></div>
+      <span class="font34">我行购车 - 上汽大通智能选车平台</span>
+    </div>
+    <img src='../lib/img/shop_bg.png' style='height:4.06rem;' class='wp100' />
+  </div>
   <div class='pos-rel tcenter'
        style='background-image: url("../lib/img/3_bg.png"); background-size: cover; top: -2.1rem;width: calc(100% - .4rem);height:3.8rem;padding: .25rem .4rem; margin: 0 .2rem '>
     <ul>
       <li class="inline-block tcenter wp32 vtop" style="padding-top: 0.44rem;">
-        <a href='../main'>
-          <div><img src='../lib/img/wx.png' style='width: .84rem; margin-bottom: .1rem;' /></div>
-          <div class="black">微信</div>
+        <a href='tel:13761283834'>
+          <div><img src='../lib/img/sj.png' style='width: .84rem; margin-bottom: .1rem;' /></div>
+          <div class="black">手机</div>
         </a>
       </li><li class="inline-block tcenter wp32 blue vtop">
         <div><img src='../lib/img/yg.png' style='width: 1.3rem' /></div>
         <div class="black font36" style='margin-top: .1rem'><strong>嘻嘻哈哈</strong></div>
         <div class="gray font26">NO:J90090</div>
       </li><li class="inline-block tcenter wp32 vtop black " style="padding-top: 0.44rem;">
-        <a href='tel:13761283834'>
-          <div><img src='../lib/img/sj.png' style='width: .84rem; margin-bottom: .1rem;' /></div>
-          <div class="black">手机</div>
+        <a onclick='document.querySelector("#popup").className=""; document.body.style.overflow="hidden"'>
+          <div><img src='../lib/img/share.png' style='width: .84rem; margin-bottom: .1rem;' /></div>
+          <div class="black">分享</div>
         <a>
       </li>
     </ul>
   </div>
   <div class="mr30 ml30 pos-rel" style="top: -1.8rem" >
-    <img src='../lib/img/2_ad.png' class="wp100" />
+    <img src='../lib/img/4_banner.png' class="wp100" />
   </div>
 
   <div class='mr30 ml30 pos-rel' style="top: -1.3rem;padding-bottom:2rem">
@@ -48,7 +54,7 @@
       </div>
       <div class="black tcenter font36" style='margin: .5rem 0 .3rem 0'><strong>G10 PLUS 柴油豪华版</strong></div>
       <div class="red tcenter font36"><strong>229.800起</strong></div>
-      <div class='btn'>立即订购</div>
+      <div class='btn blue'>立即订购</div>
     </div>
     <div class="car-card">
       <div class="tleft"><img src='../lib/img/hot.png' style="width: 2rem"/></div>
@@ -57,7 +63,7 @@
       </div>
       <div class="black tcenter font36" style='margin: .5rem 0 .3rem 0'><strong>G10 PLUS 柴油豪华版</strong></div>
       <div class="red tcenter font36"><strong>229.800起</strong></div>
-      <div class='btn'>立即订购</div>
+      <div class='btn blue'>立即订购</div>
     </div>
   </div>
 
@@ -78,6 +84,13 @@
         </a>
       </li>
     </ul>
+  </div>
+</div>
+
+<div id='popup' class='hide' onclick="this.className = 'hide'; document.body.style.overflow = ''">
+  <div id='mask'></div>
+  <div id='layer' class="tcenter" >
+    <img src='../lib/img/share_bg.png' class='wp100' />
   </div>
 </div>
 

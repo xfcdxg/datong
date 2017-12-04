@@ -5,3 +5,12 @@
 .car-card .btn {
   width:3.4rem;margin: .64rem auto
 }
+
+
+#layer {
+  position: absolute;
+  right: .5rem;
+  top: 1rem;
+  z-index: 9;
+  width: 70%;
+}
