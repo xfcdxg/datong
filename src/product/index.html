@@ -1,0 +1,104 @@
+<!DOCTYPE html/>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <title>大通</title>
+    <link rel='stylesheet' href='../lib/css/normalize.css' />
+    <link rel='stylesheet' href='../lib/css/common.css' />
+    <link rel='stylesheet' href='style.css' />
+    <script src='../lib/viewport.js'></script>
+  </head>
+  <body>
+
+<div id='root'>
+  <div class="tcenter m30">
+    <div class='msg bg_black' ><div class='badge'></div></div>
+    <a href='../main'><img src='../lib/img/home.png' class="fleft" style="width: .38rem" /></a>
+    <div class='nav' id='nav1'>
+      <ul><li class='active'><span>车型介绍</span></li><li><span>视频介绍</span></li></ul>
+    </div>
+  </div>
+  <div style='height: 100%;background-color:#f3f6fa'>
+    <div class='page-container' id='page-container1' style='width: 200%; transition: all .3s ease;'>
+      <div class="page-list inline-block vtop" style='width: calc(100% / 2)'>
+        <div class='tcenter font40' style='padding: .5rem 0'>
+          <strong>G10 车型介绍</strong>
+        </div>
+        <div style='padding: 0 .6rem'>
+          <img src='../lib/img/chexing.png' class='wp100' />
+        </div>
+      </div><div class="page-list inline-block vtop" style='width: calc(100% / 2)'>
+        <div class='nav tcenter' id='nav2' style='padding:.24rem 0'>
+          <ul><li class='active'><span>G10</span></li><li><span>V80</span></li><li><span>T60</span></li></ul>
+        </div>
+        <div class='page-container' id='page-container2' style='width: 300%; transition: all .3s ease;'>
+          <div class="page-list inline-block vtop mt30" style='width: calc(100% / 3)'>
+            <div style='background-color: #000; height: 3rem' class='mr30 ml30 mb30'></div>
+            <div style='background-color: #000; height: 3rem' class='mr30 ml30 mb30'></div>
+          </div><div class="page-list inline-block vtop mt30" style='width: calc(100% / 3)'>
+            <div style='background-color: #000; height: 3rem' class='mr30 ml30 mb30'></div>
+          </div><div class="page-list inline-block vtop mt30" style='width: calc(100% / 3)'>
+            <div style='background-color: #000; height: 3rem' class='mr30 ml30 mb30'></div>
+            <div style='background-color: #000; height: 3rem' class='mr30 ml30 mb30'></div>
+            <div style='background-color: #000; height: 3rem' class='mr30 ml30 mb30'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='pos-abs' style='height: 1.1rem; width: 1.1rem;bottom: 1.52rem; right: .32rem'>
+    <img src='../lib/img/kf_icon.png' class='wp100' />
+  </div>
+</div>
+<script src='../lib/index.js'></script>
+<script>
+  ;(function() {
+    var pageContainerEl1 = el('#page-container1')
+    var pageContainerEl2 = el('#page-container2')
+    var navEl1 = el('#nav1')
+    var liEls1 = els('li', navEl1)
+
+    var navEl2 = el('#nav2')
+    var liEls2 = els('li', navEl2)
+    // console.log('liEls is Array?', Array.isArray(liEls))
+    var clientWidth = document.body.clientWidth
+
+    var liArr1 = []
+    var liArr2 = []
+
+    for (var i = 0; i < liEls1.length; i++) {
+      liArr1.push(liEls1[i])
+    }
+    // console.log('liArr is Array?', Array.isArray(liArr1))
+    var handleNav1Click = function(o, i) {
+      liArr1.forEach(function(o) {
+        o.className = ''
+      })
+      o.className = 'active'
+      pageContainerEl1.style.webkitTransform = 'translateX(-' + i * clientWidth + 'px)'
+    }
+    liArr1.forEach(function(o, i) {
+      o.addEventListener('click', function() { handleNav1Click(o, i) }, false)
+    })
+
+    for (var i = 0; i < liEls2.length; i++) {
+      liArr2.push(liEls2[i])
+    }
+    // console.log('liArr is Array?', Array.isArray(liArr1))
+    var handleNav2Click = function(o, i) {
+      liArr2.forEach(function(o) {
+        o.className = ''
+      })
+      o.className = 'active'
+      pageContainerEl2.style.webkitTransform = 'translateX(-' + i * clientWidth + 'px)'
+    }
+    liArr2.forEach(function(o, i) {
+      o.addEventListener('click', function() { handleNav2Click(o, i) }, false)
+    })
+  })()
+</script>
+</body></html>

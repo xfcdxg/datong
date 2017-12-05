@@ -9,6 +9,7 @@
     return container.querySelector(selector)
   })
   reg('els', function(selector, container) {
+    console.log(container)
     if (!container) container = document
     return container.querySelectorAll(selector)
   })

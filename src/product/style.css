@@ -1,0 +1,30 @@
+
+#nav1 li {
+  width: 25%;
+}
+.nav li {
+  display: inline-block;
+  width: 20%;
+  font-size: .3rem;
+  text-align: center;
+}
+.nav li span {
+  color: #828a92;
+}
+.nav li.active span {
+  color: #3d464d;
+  border-bottom: .05rem solid #4285f4;
+  padding-bottom: .13rem;
+}
+
+
+.page-container {
+}
+.page-container .page {
+  display: block;
+  margin: .45rem 0;
+  border-bottom: .01rem solid rgba(211,215,219,0.30);
+}
+.page-container .page-list {
+  overflow: hidden;
+}
