@@ -1,0 +1,31 @@
+.network {
+  border-bottom: 1px solid #efefef;
+  padding: .4rem .3rem;
+  height: 2.2rem;
+}
+.netword div:first-child {
+  margin-bottom: .2rem;
+  font-size: .3rem
+}
+#layer {
+  position: absolute;
+  overflow-y: auto;
+  height: 5.6rem;
+  width: 100%;
+  top: -.05rem;
+  background-color: #fff;
+  z-index: 9;
+}
+#layer div {
+  text-align: center;
+  color: #3d464d;
+  padding: .25rem 0;
+  border-bottom: 1px solid #efefef
+}
+
+#nav li {
+  color: #828a92
+}
+#nav li.active {
+  color: #3d464d
+}

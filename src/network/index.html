@@ -1,0 +1,123 @@
+<!DOCTYPE html/>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <title>大通</title>
+    <link rel='stylesheet' href='../lib/css/normalize.css' />
+    <link rel='stylesheet' href='../lib/css/common.css' />
+    <link rel='stylesheet' href='style.css' />
+    <script src='../lib/viewport.js'></script>
+  </head>
+  <body>
+
+<div id='root'>
+  <div class="tcenter m30">
+    <div class='msg bg_black' ><div class='badge'></div></div>
+    <a href='../main'><img src='../lib/img/home.png' class="fleft" style="width: .38rem" /></a>
+    <strong class="font36">交车网点</strong>
+  </div>
+  <div style='box-shadow:0 6px 12px 0 rgba(211,215,219,0.30); padding: .3rem 0'>
+    <ul id='nav'>
+      <li class=' inline-block wp50 tcenter'>
+        <strong class='font30'>全部城市</strong>
+        <span><img src='../lib/img/down.png' class='pos-rel' style='width: .24rem; top: -.03rem;' /></span>
+      </li><li class=' inline-block wp50 tcenter'>
+        <strong class='font30'>全部区域</strong>
+        <span><img src='../lib/img/down.png' class='pos-rel' style='width: .24rem; top: -.03rem;' /></span>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+
+    <div class='network'>
+      <div><strong>1、北京汇成丰台</strong></div>
+      <div class='gray'>北京市丰台区南西环中路260号北京新发地汽车交易市场新车区1号展台</div>
+    </div>
+
+    <div class='network'>
+      <div><strong>1、北京汇成丰台</strong></div>
+      <div class='gray'>北京市丰台区南西环中路260号北京新发地汽车交易市场新车区1号展台</div>
+    </div>
+
+    <div class='network'>
+      <div><strong>1、北京汇成丰台</strong></div>
+      <div class='gray'>北京市丰台区南西环中路260号北京新发地汽车交易市场新车区1号展台</div>
+    </div>
+
+  </div>
+  <div class='kefu'><img src='../lib/img/kf_icon.png' /></div>
+</div>
+<div id='popup' class='hide' style='height: calc(100% - 2.3rem); top: 2.3rem'>
+  <div id='mask'></div>
+  <div id='layer'>
+
+  </div>
+</div>
+
+<script src='../lib/index.js'></script>
+<script>
+  ;(function() {
+    const maskEl = el('#mask')
+    const popupEl = el('#popup')
+    const navEl = el('#nav')
+    const layerEl = el('#layer')
+    const liEls = els('li', navEl)
+    let currentNavIdx = -1
+
+    var mockData = [
+      ['全部城市', '上海市', '北京市', 'X市', 'Y市', 'Z市', 'X市', 'Y市', 'Z市'],
+      ['全部区域', '闵行区', '虹口区', 'X区', 'Y区', 'Z区', 'X区', 'Y区', 'Z区']
+    ]
+    var liArr = []
+
+    for (var i = 0; i < liEls.length; i++) {
+      liArr.push(liEls[i])
+    }
+
+    var handleNavClick = function(o, i) {
+      liArr.forEach(function(o) {
+        el('img', o).setAttribute('src', '../lib/img/down.png')
+        o.className = o.className.replace(' active', '')
+      })
+
+      var setActive = function() {
+        o.className += ' active'
+        el('img', o).setAttribute('src', '../lib/img/up.png')
+        fillData()
+      }
+
+      var fillData = function() {
+        layerEl.innerHTML = ''
+        mockData[i].forEach(data => {
+          var divEl = document.createElement('div')
+          divEl.innerText = data
+          layerEl.append(divEl)
+        })
+      }
+
+      if (popupEl.className === 'hide') {
+        popupEl.className = ''
+        setActive()
+      } else {
+        if (currentNavIdx === i) {
+          popupEl.className = 'hide'
+        } else {
+          setActive()
+        }
+      }
+      currentNavIdx = i
+      // orderContainerEl.style.webkitTransform = 'translateX(-' + i * clientWidth + 'px)'
+    }
+
+    liArr.forEach(function(o, i) {
+      o.addEventListener('click', function() { handleNavClick(o, i) }, false)
+    })
+
+  })()
+</script>
+</body></html>
