@@ -16,37 +16,57 @@
 
 <div id='root'>
   <div class="tcenter m30">
-    <div class='msg bg_black' ><div class='badge'></div></div>
+    <a href='../msg'><div class='msg bg_black' ><div class='badge'></div></div></a>
     <a href='../main'><img src='../lib/img/home.png' class="fleft" style="width: .38rem" /></a>
-    <strong class="font36">系统通知</strong>
+    <strong class="font36">意见反馈</strong>
   </div>
-  <div style='height: 100%;background-color:#f3f6fa'>
+  <textarea class="wp100" style='background-color: #f3f6fa; height: 3.2rem;font-size: .28rem; padding: .3rem' placeholder="请告诉我们你遇到的问题或想反馈的意见"></textarea>
 
-    <div class='msg-container ml30 mr30' style='padding-top: .3rem'>
-      <div class='tcenter gray' style='margin-bottom: .2rem'>11-12 10:45</div>
-      <div class='bg-w' style='height: 2.12rem;padding: .4rem .3rem'>
-        <div class='font30' style='margin-bottom: .2rem'><strong>您的推荐购车有新动态</strong></div>
-        <div class='gray'>您推荐的好友“XX”取消了［车型］的购车订单。</div>
+  <div style='padding: .45rem .3rem' id='upload-container'>
+    <div class='pic'>
+      <img src='../lib/img/pic.png'/>
+      <img src='../lib/img/del.png' onclick="confirm('确认删除图片吗？')" />
+    </div><div class='pic'>
+      <img src='../lib/img/pic.png'/>
+      <img src='../lib/img/del.png' onclick="confirm('确认删除图片吗？')"/>
+    </div><div class='pic'>
+      <img src='../lib/img/pic.png'/>
+      <img src='../lib/img/del.png' onclick="confirm('确认删除图片吗？')"/>
+    </div><div class='pic'>
+      <img src='../lib/img/pic.png'/>
+      <img src='../lib/img/del.png' onclick="confirm('确认删除图片吗？')"/>
+    </div>
+    <div class='upload'>
+      <div>
+        <img src='../lib/img/camera.png' style='width: .46rem' />
+        <div>1/5</div>
       </div>
     </div>
-
-    <div class='msg-container ml30 mr30' style='padding-top: .3rem'>
-      <div class='tcenter gray' style='margin-bottom: .2rem'>11-12 10:45</div>
-      <div class='bg-w' style='height: 2.12rem;padding: .4rem .3rem'>
-        <div class='font30' style='margin-bottom: .2rem'><strong>您的推荐购车有新动态</strong></div>
-        <div class='gray'>您推荐的好友“XX”取消了［车型］的购车订单。</div>
-      </div>
-    </div>
-
-    <div class='msg-container ml30 mr30' style='padding-top: .3rem'>
-      <div class='tcenter gray' style='margin-bottom: .2rem'>11-12 10:45</div>
-      <div class='bg-w' style='height: 2.12rem;padding: .4rem .3rem'>
-        <div class='font30' style='margin-bottom: .2rem'><strong>您的推荐购车有新动态</strong></div>
-        <div class='gray'>您推荐的好友“XX”取消了［车型］的购车订单。</div>
-      </div>
-    </div>
-
   </div>
 </div>
 
+<div id='popup' class=''>
+  <div id='mask'></div>
+  <div id='layer'>
+    <div><img src='../lib/img/feedback_success.png' style='width: 2rem' /></div>
+    <div class="tcenter" style='font-size:.40rem; margin-bottom: .2rem'><strong>感谢您的反馈！</strong></div>
+    <div class="tcenter mb30">您的意见和建议，我们将认真对待！</div>
+    <div class='btn' id='zhidao'>确定</div>
+  </div>
+</div>
+
+<script src='../lib/index.js'></script>
+<script>
+  ;(function() {
+    var zhidaoEl = el('#zhidao')
+    var popupEl = el('#popup')
+
+    var handleZhidaoClick = function() {
+      popupEl.className = 'hide'
+      document.body.style.overflow = ''
+    }
+
+    bind(zhidaoEl, 'click', handleZhidaoClick)
+  })()
+</script>
 </body></html>
