@@ -28,8 +28,16 @@
         <div class='tcenter font40' style='padding: .5rem 0'>
           <strong>G10 车型介绍</strong>
         </div>
-        <div style='padding: 0 .6rem'>
-          <img src='../lib/img/chexing.png' class='wp100' />
+        <div class='container wp100' style=''>
+          <ul style='width: 300%; transition: all .3s ease'>
+            <li class="inline-block" style='width: calc(100% / 3); padding: 0 .6rem' >
+              <img src='../lib/img/chexing.png' class='wp100' />
+            </li><li class="inline-block" style='width: calc(100% / 3); padding: 0 .6rem' >
+              <img src='../lib/img/chexing.png' class='wp100' />
+            </li><li class="inline-block" style='width: calc(100% / 3); padding: 0 .6rem' >
+              <img src='../lib/img/chexing.png' class='wp100' />
+            </li>
+          </ul>
         </div>
       </div><div class="page-list inline-block vtop" style='width: calc(100% / 2)'>
         <div class='nav tcenter' id='nav2' style='padding:.24rem 0'>
@@ -53,6 +61,7 @@
   <div class='kefu'><img src='../lib/img/kf_icon.png' /></div>
 </div>
 <script src='../lib/index.js'></script>
+<script src='../lib/touch.js'></script>
 <script>
   ;(function() {
     var pageContainerEl1 = el('#page-container1')
@@ -97,6 +106,31 @@
     liArr2.forEach(function(o, i) {
       o.addEventListener('click', function() { handleNav2Click(o, i) }, false)
     })
+
+    // 滑动图片代码
+    var containerEl = el('.container')
+    var ulEl = el('ul', containerEl)
+    var imgEls = els('ul li img', containerEl)
+    var pageIndex = 0
+    var forwardPage = 0
+    var pageCount = imgEls.length
+
+    new touch().bindMouseEvent(
+      containerEl, function () {}, function () {},
+      function (e) {
+        if(e.isRight() && e.isHorizontal() && e.slideXCount == 1 && e.distance > 0) {
+          pageIndex = --pageIndex < 0 ? 0 : pageIndex
+        } else
+        if(e.isLeft() && e.isHorizontal() && e.slideXCount == 1 && e.distance > 0) {
+          pageIndex = ++pageIndex >= pageCount ? pageCount - 1 : pageIndex
+        }
+
+        forwardPage = pageIndex
+
+        ulEl.style.webkitTransform = 'translateX(-' + forwardPage * clientWidth + 'px)'
+      }
+    )
+
   })()
 </script>
 </body></html>
