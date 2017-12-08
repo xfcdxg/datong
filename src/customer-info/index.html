@@ -64,7 +64,18 @@
       <span class="circle"><img src='../lib/img/status_a.png' /></span>
       <span class="status">已提车</span>
     </div>
-    <div class='pos-abs' style='border-right: 1px solid #efefef;height: calc(100% - 1rem);top: 0;left: 2.19rem;margin: .5rem 0;z-index: -1'></div>
+    <div class='pos-abs' id='line' style='border-right: 1px solid #efefef;height: calc(100% - 1rem);top: 0;margin: .5rem 0;z-index: -1'></div>
   </div>
 </div>
+<script src='../lib/index.js'></script>
+<script>
+  ;(function() {
+    var lineEl = el('#line')
+    var circleEl = el('.circle')
+    var style = getComputedStyle(circleEl)
+    console.log(style)
+    console.log(circleEl.offsetLeft, circleEl.offsetWidth)
+    lineEl.style.left = (circleEl.offsetLeft + circleEl.offsetWidth / 2 - 1) + 'px'
+  })()
+</script>
 </body></html>
