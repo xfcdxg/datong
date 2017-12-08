@@ -73,8 +73,6 @@
     var lineEl = el('#line')
     var circleEl = el('.circle')
     var style = getComputedStyle(circleEl)
-    console.log(style)
-    console.log(circleEl.offsetLeft, circleEl.offsetWidth)
     lineEl.style.left = (circleEl.offsetLeft + circleEl.offsetWidth / 2 - 1) + 'px'
   })()
 </script>
