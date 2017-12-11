@@ -15,15 +15,15 @@
   <body>
 
 <div id='root'>
-  <div class="tcenter m30">
+  <div class="tcenter" style='padding: .3rem'>
     <a href='../msg'><div class='msg bg_black' ><div class='badge'></div></div></a>
     <a href='../main'><img src='../lib/img/home.png' class="fleft" style="width: .38rem" /></a>
     <div class='nav' id='nav1'>
       <ul><li class='active'><span>车型介绍</span></li><li><span>视频介绍</span></li></ul>
     </div>
   </div>
-  <div style='height: 100%;background-color:#f3f6fa'>
-    <div class='page-container' id='page-container1' style='width: 200%; transition: all .3s ease;'>
+  <div style='height: 100%;background-color:#f3f6fa; overflow: hidden'>
+    <div class='page-container' id='page-container1' style='width: 200%; transition: all .3s ease; '>
       <div class="page-list inline-block vtop" style='width: calc(100% / 2)'>
         <div class='tcenter font40' style='padding: .5rem 0'>
           <strong>G10 车型介绍</strong>
@@ -114,9 +114,12 @@
     var pageIndex = 0
     var forwardPage = 0
     var pageCount = imgEls.length
+    var stopScroll = function (e) {
+      e.preventDefault()
+    }
 
     new touch().bindMouseEvent(
-      containerEl, function () {}, function () {},
+      containerEl, function () { document.body.addEventListener('touchmove', stopScroll, false) }, function (e) {},
       function (e) {
         if(e.isRight() && e.isHorizontal() && e.slideXCount == 1 && e.distance > 0) {
           pageIndex = --pageIndex < 0 ? 0 : pageIndex
@@ -128,6 +131,7 @@
         forwardPage = pageIndex
 
         ulEl.style.webkitTransform = 'translateX(-' + forwardPage * clientWidth + 'px)'
+        document.body.removeEventListener('touchmove', stopScroll, false)
       }
     )
 
