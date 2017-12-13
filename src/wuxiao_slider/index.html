@@ -1,0 +1,57 @@
+<!DOCTYPE html/>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <link rel='stylesheet' href='../lib/css/normalize.css' />
+    <link rel='stylesheet' href='../lib/css/common.css' />
+    <link rel='stylesheet' href='style.css' />
+    <script src='../lib/viewport.js'></script>
+  </head>
+  <body>
+
+<div id='root'>
+  <div class='container wp100'>
+    <ul style='width: 300%; transition: all .3s ease'>
+      <li class="inline-block" style='width: calc(100% / 3)' >
+        <img src='../lib/img/chexing.png' class='wp100' />
+      </li><li class="inline-block" style='width: calc(100% / 3)' >
+        <img src='../lib/img/chexing.png' class='wp100' />
+      </li><li class="inline-block" style='width: calc(100% / 3)' >
+        <img src='../lib/img/chexing.png' class='wp100' />
+      </li>
+    </ul>
+  </div>
+</div>
+<script src='../lib/index.js'></script>
+<script src='../lib/touch.js'></script>
+<script>
+  ;(function() {
+    var containerEl = el('.container')
+    var ulEl = el('ul', containerEl)
+    var imgEls = els('ul li img', containerEl)
+    var pageIndex = 0
+    var forwardPage = 0
+    var pageCount = imgEls.length
+    var clientWidth = document.body.clientWidth
+    new touch().bindMouseEvent(
+      containerEl, function () {}, function () {},
+      function (e) {
+        if(e.isRight() && e.isHorizontal() && e.slideXCount == 1 && e.distance > 0) {
+          pageIndex = --pageIndex < 0 ? 0 : pageIndex
+        } else
+        if(e.isLeft() && e.isHorizontal() && e.slideXCount == 1 && e.distance > 0) {
+          pageIndex = ++pageIndex >= pageCount ? pageCount - 1 : pageIndex
+        }
+
+        forwardPage = pageIndex
+
+        ulEl.style.webkitTransform = 'translateX(-' + forwardPage * clientWidth + 'px)'
+      }
+    )
+  })()
+</script>
+</body></html>
